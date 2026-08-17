@@ -1,0 +1,125 @@
+/* AI Guide Interface */
+.ai-guide {
+  position: fixed;
+  bottom: 6rem;
+  right: 2rem;
+  max-width: 400px;
+  background: rgba(10, 10, 30, 0.9);
+  border: 2px solid #00f0ff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 0 30px rgba(0, 240, 255, 0.3),
+    inset 0 0 20px rgba(0, 240, 255, 0.1);
+  animation: guidePulse 4s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.ai-guide.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+
+@keyframes guidePulse {
+  0%, 100% { box-shadow: 0 0 30px rgba(0, 240, 255, 0.3); }
+  50% { box-shadow: 0 0 50px rgba(0, 240, 255, 0.5); }
+}
+
+.guide-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00f0ff 0%, #0066ff 100%);
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
+}
+
+.guide-avatar::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.1) 10px,
+      rgba(255, 255, 255, 0.1) 20px
+    );
+  animation: avatarScan 3s linear infinite;
+}
+
+@keyframes avatarScan {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100%); }
+}
+
+.guide-text {
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  min-height: 60px;
+}
+
+.guide-audio {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guide-audio::before {
+  content: '🔊';
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+/* Dimensional Distortion Overlay */
+.dimensional-distortion {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(255, 107, 107, 0.4) 0%, transparent 70%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+}
+
+/* Sound Wave Visualization */
+.sound-wave {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  height: 20px;
+}
+
+.sound-wave span {
+  width: 3px;
+  background: #00f0ff;
+  animation: soundWave 0.5s ease-in-out infinite;
+}
+
+.sound-wave span:nth-child(1) { animation-delay: 0s; height: 10px; }
+.sound-wave span:nth-child(2) { animation-delay: 0.1s; height: 15px; }
+.sound-wave span:nth-child(3) { animation-delay: 0.2s; height: 20px; }
+.sound-wave span:nth-child(4) { animation-delay: 0.1s; height: 15px; }
+.sound-wave span:nth-child(5) { animation-delay: 0s; height: 10px; }
+
+@keyframes soundWave {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1.5); }
+}
