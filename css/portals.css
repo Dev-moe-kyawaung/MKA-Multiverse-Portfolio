@@ -1,0 +1,49 @@
+.portal {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, transparent 40%, var(--color-portal) 100%);
+  box-shadow: 
+    0 0 60px var(--color-portal),
+    inset 0 0 60px var(--color-portal);
+  animation: portalPulse 3s ease-in-out infinite;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.portal::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px dashed var(--color-dimension);
+  animation: portalSpin 10s linear infinite;
+}
+
+@keyframes portalPulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes portalSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.portal-distortion {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, var(--color-dimension) 0%, transparent 70%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 50;
+}
