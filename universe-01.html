@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universe 01 | Android Development Realm</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/universe.css" />
+  <link rel="stylesheet" href="../css/guide.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="universe-01">
+  <!-- Three.js Canvas for 3D Portal Effects -->
+  <canvas id="three-canvas"></canvas>
+  
+  <!-- Dimensional Layers -->
+  <div class="dimension-container">
+    <div class="dimension-layer" data-depth="0.1">
+      <div class="cosmic-particle"></div>
+      <div class="cosmic-particle"></div>
+      <div class="cosmic-particle"></div>
+    </div>
+    <div class="dimension-layer" data-depth="0.3"></div>
+    <div class="dimension-layer" data-depth="0.6"></div>
+  </div>
+
+  <!-- Content Section -->
+  <main class="universe-content">
+    <header class="universe-header">
+      <h1 class="glitch-text" data-text="ANDROID REALM">ANDROID REALM</h1>
+      <p class="universe-subtitle">Where mobile applications transcend dimensions</p>
+    </header>
+
+    <section class="project-showcase">
+      <div class="project-card" data-project="1">
+        <div class="project-portal"></div>
+        <h2>Quantum Chat App</h2>
+        <p>Real-time messaging across spacetime using WebSockets and Firebase</p>
+        <div class="tech-stack">
+          <span class="tech-badge">Kotlin</span>
+          <span class="tech-badge">Firebase</span>
+          <span class="tech-badge">WebRTC</span>
+        </div>
+        <button class="explore-btn">Enter Project</button>
+      </div>
+
+      <div class="project-card" data-project="2">
+        <div class="project-portal"></div>
+        <h2>Nebula E-Commerce</h2>
+        <p>Multi-dimensional shopping experience with AR product visualization</p>
+        <div class="tech-stack">
+          <span class="tech-badge">Jetpack Compose</span>
+          <span class="tech-badge">ARCore</span>
+          <span class="tech-badge">Stripe</span>
+        </div>
+        <button class="explore-btn">Enter Project</button>
+      </div>
+
+      <div class="project-card" data-project="3">
+        <div class="project-portal"></div>
+        <h2>Void Task Manager</h2>
+        <p>Productivity app that bends time with AI-powered scheduling</p>
+        <div class="tech-stack">
+          <span class="tech-badge">Room DB</span>
+          <span class="tech-badge">WorkManager</span>
+          <span class="tech-badge">ML Kit</span>
+        </div>
+        <button class="explore-btn">Enter Project</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Navigation -->
+  <nav class="reality-nav-bottom">
+    <button class="nav-btn" onclick="window.location.href='../index.html'">← Return to Hub</button>
+    <button class="nav-btn" onclick="window.location.href='universe-02.html'">Next Universe →</button>
+  </nav>
+
+  <!-- AI Guide -->
+  <div id="ai-guide" class="ai-guide hidden">
+    <div class="guide-avatar"></div>
+    <div class="guide-text"></div>
+    <div class="guide-audio"></div>
+  </div>
+
+  <!-- Audio Elements -->
+  <audio id="ambient-sound" loop>
+    <source src="../assets/sounds/universe-01-ambient.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="portal-sound">
+    <source src="../assets/sounds/portal-open.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/three-portal.js"></script>
+  <script src="../js/guide.js"></script>
+  <script src="../js/universe-01.js"></script>
+</body>
+</html>
