@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiverse Portfolio | Moe Kyaw</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/portals.css" />
+  <link rel="stylesheet" href="css/parallax.css" />
+  <link rel="stylesheet" href="css/guide.css" />
+</head>
+<body class="multiverse-hub">
+  <div id="parallax-world" class="parallax-container">
+    <div class="layer layer-bg" data-depth="0.2"></div>
+    <div class="layer layer-mid" data-depth="0.5"></div>
+    <div class="layer layer-fg" data-depth="0.8"></div>
+  </div>
+
+  <div id="portal-container"></div>
+
+  <div id="ai-guide" class="ai-guide hidden">
+    <div class="guide-avatar"></div>
+    <div class="guide-text"></div>
+  </div>
+
+  <nav id="reality-nav">
+    <button class="reality-btn" data-universe="1">Universe 01</button>
+    <button class="reality-btn" data-universe="2">Universe 02</button>
+    <!-- Add up to 30 -->
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/portals.js"></script>
+  <script src="js/guide.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
