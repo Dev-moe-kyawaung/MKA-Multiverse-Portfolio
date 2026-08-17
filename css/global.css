@@ -1,0 +1,90 @@
+:root {
+  --color-void: #050510;
+  --color-portal: #00f0ff;
+  --color-dimension: #ff00e6;
+  --color-reality: #ffffff;
+  --font-main: 'Orbitron', sans-serif;
+  --ease-quantum: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-void);
+  color: var(--color-reality);
+  font-family: var(--font-main);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+#parallax-world {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+.layer-bg {
+  background-image: url('assets/textures/nebula-bg.jpg');
+}
+
+.layer-mid {
+  background-image: url('assets/textures/stars-mid.png');
+}
+
+.layer-fg {
+  background-image: url('assets/textures/dust-fg.png');
+}
+
+#portal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+#reality-nav {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 100;
+}
+
+.reality-btn {
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid var(--color-portal);
+  color: var(--color-portal);
+  padding: 0.8rem 1.5rem;
+  font-family: var(--font-main);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reality-btn:hover {
+  background: var(--color-portal);
+  color: var(--color-void);
+  box-shadow: 0 0 20px var(--color-portal);
+}
